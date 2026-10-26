@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "title": "Supplied static valve-part exports",
+  "source_kind": "SolidWorks-exported URDF/STL directories; source SLDPRT files are not included",
+  "license": "CC-BY-NC-4.0 repository asset policy",
+  "parts": [
+    {
+      "directory": "valve_1",
+      "source_export_directory": "1号阀.SLDPRT",
+      "joint_count": 0,
+      "link_count": 1,
+      "mass_kg": 2.0277,
+      "files": {
+        "meshes/1号阀.SLDPRT.STL": {
+          "sha256": "1d27f46e096037b58198e5cbb0ef86c6ccd7d3bc4c2e34b17df5b61e954345d4",
+          "bytes": 308784
+        },
+        "README.md": {
+          "sha256": "caaf496ab9456b8f72125576534a8162397064e73eaac74cbed2312bd599478d",
+          "bytes": 816
+        },
+        "urdf/model.urdf": {
+          "sha256": "90ce988dd55d8215bbbeff35aba1d21e6bc72e95178059c347f6e5542b7cb8fa",
+          "bytes": 1082
+        }
+      }
+    },
+    {
+      "directory": "valve_2",
+      "source_export_directory": "2号阀件.SLDPRT",
+      "joint_count": 0,
+      "link_count": 1,
+      "mass_kg": 5.3594,
+      "files": {
+        "meshes/2号阀件.SLDPRT.STL": {
+          "sha256": "416c0a9898ed9e99dff4c2bc5addddfe88deb0ff1163ca81558cec54caaabc49",
+          "bytes": 475584
+        },
+        "README.md": {
+          "sha256": "18159bd0d790b361cba08b60571f59927b1ccc36fb1266a492b7fc6d4e10f328",
+          "bytes": 822
+        },
+        "urdf/model.urdf": {
+          "sha256": "5f6b6665a7ae73f34398ce6502645a8283b63b8922dc33b0d3aa63e436249828",
+          "bytes": 1097
+        }
+      }
+    },
+    {
+      "directory": "t_valve",
+      "source_export_directory": "T型阀.SLDPRT",
+      "joint_count": 0,
+      "link_count": 1,
+      "mass_kg": 1.3463,
+      "files": {
+        "meshes/T型阀.SLDPRT.STL": {
+          "sha256": "59eb28d7b2815574f27b50f62831815bb916918f1e3a88a6fb4a3a5be62f0b53",
+          "bytes": 12784
+        },
+        "README.md": {
+          "sha256": "2a21c02ef6d061558d9a9ac400d210d0c6c2305cccde78c052e7094d465457b5",
+          "bytes": 850
+        },
+        "urdf/model.urdf": {
+          "sha256": "5153f80c358798a2f45794156effb7102c33f2418e1e0d563d741c7c4bdfe489",
+          "bytes": 1088
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cleaned from the supplied SolidWorks part export. Source CAD file is not redistributed. -->
+<robot name="t_valve">
+  <link name="t_valve">
+    <inertial>
+      <origin
+        xyz="1.8704E-05 -0.040486 0.000412850000000002"
+        rpy="0 0 0" />
+      <mass
+        value="1.3463" />
+      <inertia
+        ixx="0.0059733"
+        ixy="-2.2785E-06"
+        ixz="-1.8399E-06"
+        iyy="0.0030544"
+        iyz="-5.51709999999997E-05"
+        izz="0.0077765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/T型阀.SLDPRT.STL" />
+      </geometry>
+      <material name="t_valve_material">
+        <color rgba="0.72 0.76 0.80 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/T型阀.SLDPRT.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

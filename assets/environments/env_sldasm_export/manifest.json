@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "title": "Two-revolute environment assembly export",
+  "source_export_directory": "env.SLDASM export package supplied by user",
+  "source_cad_uploaded": false,
+  "link_count": 3,
+  "joint_count": 2,
+  "joint_types": {
+    "joint1": "revolute",
+    "joint2": "revolute"
+  },
+  "joint2_axis_status": "Provisional local z axis reconstructed because source CSV omitted Axis_joint2; verify against CAD before dynamics use.",
+  "license": "CC-BY-NC-4.0 repository asset policy",
+  "files": {
+    "config/joint_names.yaml": {
+      "sha256": "0ffd88e2e6734a2d3b343f1289d9b2bc47448feb3ac98a34bddb4fbc99dd3bc4",
+      "bytes": 50
+    },
+    "meshes/base_link.STL": {
+      "sha256": "fa07d9f57243d5022b90173573c77287f8e0d19319dbf4d230725536925c6a57",
+      "bytes": 915084
+    },
+    "meshes/link1.STL": {
+      "sha256": "443c57ddf888a11e85ac3a05188bd45d8869b7f4764e4e83258d013f4eddecf8",
+      "bytes": 138384
+    },
+    "meshes/link2.STL": {
+      "sha256": "4737875ddc37e7218fed4fbbf78f503746911cc816c00b1425c6362ee13fdad3",
+      "bytes": 225284
+    },
+    "README.md": {
+      "sha256": "bf041b788cbb02e768f7024f80920d07bca4cd986487a878b1f6ddaaac53c199",
+      "bytes": 2767
+    },
+    "urdf/env.urdf": {
+      "sha256": "679107108293ebffa5af131e43d319bd278385827b40fbe296004b9a8dfe311d",
+      "bytes": 3424
+    }
+  }
+}

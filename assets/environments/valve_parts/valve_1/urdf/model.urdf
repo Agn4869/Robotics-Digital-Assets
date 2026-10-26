@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cleaned from the supplied SolidWorks part export. Source CAD file is not redistributed. -->
+<robot name="valve_1">
+  <link name="valve_1">
+    <inertial>
+      <origin
+        xyz="0.00026275 -0.015438 0.091341"
+        rpy="0 0 0" />
+      <mass
+        value="2.0277" />
+      <inertia
+        ixx="0.014088"
+        ixy="-2.15919999999997E-07"
+        ixz="-4.9058E-05"
+        iyy="0.016248"
+        iyz="2.85929999999998E-05"
+        izz="0.013115" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/1号阀.SLDPRT.STL" />
+      </geometry>
+      <material name="valve_1_material">
+        <color rgba="0.72 0.76 0.80 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/1号阀.SLDPRT.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
