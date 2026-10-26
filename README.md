@@ -16,6 +16,21 @@ A three-hull underwater vehicle with two four-joint manipulators and coupled two
 **Included:** a self-contained URDF, reduced STL meshes for the smaller components, native MuJoCo models, a runnable viewer, and reproducible gallery rendering. The full hull mesh is retained for the URDF/RViz2 view. No ROS, Isaac Sim, SolidWorks, Git LFS, or access to the original development machine is needed for the MuJoCo demo.
 
 **Why the MuJoCo hull looks different:** the hull source mesh has **1,535,636 triangles**, while MuJoCo accepts at most 200,000 faces per STL mesh. MuJoCo therefore uses a clearly documented visual/collision proxy for the hull; the complete hull remains available in the URDF/RViz2 path. This is a format limit, not a claim that the source geometry is wrong.
+## Environment interaction assets
+
+The second collection contains reusable objects for manipulation tasks: **push button, lever, slider with rail, wheel valve, grounded panel, and textured panel**. They are packaged as USD/USDA/USDZ-compatible assets with their source notices and provenance.
+
+➡️ **[Open the environment asset guide](assets/environments/README.md)**
+
+| Asset | Typical interaction | Format |
+|---|---|---|
+| AM-Bench push button | press / release | USD |
+| Lever | rotate around a bounded joint | USD / USDA |
+| Slider with rail | linear slide | USD / USDA |
+| Industrial handwheel | rotate wheel while body stays fixed | USDC / USDA |
+| Grounded and textured panels | mount the mechanism in a panel scene | USDA + PBR textures |
+
+These files are separately licensed upstream assets and derivatives. Their licenses are **not** silently replaced by the root CC BY-NC license; read the [provenance and attribution guide](assets/environments/SOURCES.md) before redistribution.
 
 ![Dual arms and coupled grippers in a stepped MuJoCo simulation](docs/images/uvdms_motion.gif)
 

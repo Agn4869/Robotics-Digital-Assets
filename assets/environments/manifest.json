@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "title": "Environment interaction assets for underwater manipulation",
+  "maintainer": "Agn4869",
+  "repository": "https://github.com/Agn4869/Robotics-Digital-Assets",
+  "original_projects": [
+    "https://github.com/dancher00/wasserman",
+    "https://github.com/ambench/ambench"
+  ],
+  "solidworks_source_used": false,
+  "contains_sldasm_or_sldprt": false,
+  "asset_count": 19,
+  "files": [
+    {
+      "path": "ambench/push_button.usd",
+      "sha256": "f311a2fbd0dd8c227ab6ae3f13789559bdbb809993453e38f83bfe6c0357aa2b",
+      "bytes": 23077,
+      "category": "button/lever/slider/valve",
+      "upstream": "AM-Bench source via WasserMan; source/ambench/ambench/assets/objects/push_button.usd",
+      "modification_status": "Unmodified upstream file",
+      "license": "Apache-2.0; copyright The AM-Bench Contributors"
+    },
+    {
+      "path": "ambench/lever.usd",
+      "sha256": "05e200bed3b05a2cc0e2032bcb7c1a17751ccb4d795065e63d2b8453fe97b3ec",
+      "bytes": 8023,
+      "category": "button/lever/slider/valve",
+      "upstream": "AM-Bench source via WasserMan; source/ambench/ambench/assets/objects/lever.usd",
+      "modification_status": "Unmodified upstream file",
+      "license": "Apache-2.0; copyright The AM-Bench Contributors"
+    },
+    {
+      "path": "ambench/slider_with_rail.usd",
+      "sha256": "6e81e52a3a93645cffc2d4cad57175a7a69f99fcce0a1d5d6474e56808b7213e",
+      "bytes": 59207,
+      "category": "button/lever/slider/valve",
+      "upstream": "AM-Bench source via WasserMan; source/ambench/ambench/assets/objects/slider_with_rail.usd",
+      "modification_status": "Unmodified upstream file",
+      "license": "Apache-2.0; copyright The AM-Bench Contributors"
+    },
+    {
+      "path": "ambench/valve.usd",
+      "sha256": "1fce7643e483c5795cd924ac7dca38068c726708bda9ec8ffeffd168b065b3e1",
+      "bytes": 90541,
+      "category": "button/lever/slider/valve",
+      "upstream": "AM-Bench source via WasserMan; source/ambench/ambench/assets/objects/valve.usd",
+      "modification_status": "Unmodified upstream file",
+      "license": "Apache-2.0; copyright The AM-Bench Contributors"
+    },
+    {
+      "path": "marine_mechanisms_v1/lever.usda",
+      "sha256": "7de62c1f2c2cdc1f39d5d90b314e832e35f61e5d35c47eda5151d26ec20ae83c",
+      "bytes": 153675,
+      "category": "marine-style mechanism",
+      "upstream": "WasserMan marine_mechanisms_v1 derived from AM-Bench",
+      "modification_status": "Appearance derivatives; physical definitions unchanged per source manifest",
+      "license": "Apache-2.0 original mechanism with WasserMan modifications; preserve upstream notice"
+    },
+    {
+      "path": "marine_mechanisms_v1/slider_with_rail.usda",
+      "sha256": "99792a9aba1219bcc8ab4c770f3147d99f45d953bea54c4bd1a9c82603c375ff",
+      "bytes": 62813,
+      "category": "marine-style mechanism",
+      "upstream": "WasserMan marine_mechanisms_v1 derived from AM-Bench",
+      "modification_status": "Appearance derivatives; physical definitions unchanged per source manifest",
+      "license": "Apache-2.0 original mechanism with WasserMan modifications; preserve upstream notice"
+    },
+    {
+      "path": "marine_mechanisms_v1/grounded_panel.usda",
+      "sha256": "9c5faf5c6c9a59e64db51846793c7ea689854256fe40cae0ee6651f963b65aeb",
+      "bytes": 3132,
+      "category": "panel",
+      "upstream": "WasserMan marine_mechanisms_v1",
+      "modification_status": "WasserMan-authored panel extension referencing ship_green panel",
+      "license": "Apache-2.0 upstream WasserMan; Poly Haven CC0 texture attribution"
+    },
+    {
+      "path": "industrial_handwheel/valve.usdc",
+      "sha256": "e322e89c08f45498c06b1451c88e5702e22cfdf431964418df83cde1f864210d",
+      "bytes": 401716,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/valve_2p5x.usda",
+      "sha256": "6e367340190afc031d80b95fffe1b3e06bf3fb95906283d7690f0551aa1b2604",
+      "bytes": 1382942,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/provenance.json",
+      "sha256": "ad8e68a167ae93d196ee49affc34574a0bdc0306f91ca5a91b5ac2f20f5f213f",
+      "bytes": 2172,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/valve_bimanual_4x.json",
+      "sha256": "646878a397445db89cd1b99596bae8373293fcabfe72a71dc7643f027c4098a5",
+      "bytes": 557,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/NOTICE.md",
+      "sha256": "ab56f03048a96157610f0c12f203dd3a8939bcde300da5621a493f688f6fd0c5",
+      "bytes": 786,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/LICENSE-wasserman-apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "category": "industrial handwheel valve",
+      "upstream": "WasserMan module commit 42875221404900ab4789db39ebc0c537119b79be; underlying Poly Haven model",
+      "modification_status": "WasserMan-derived valve USD / retained upstream metadata and notices",
+      "license": "WasserMan module Apache-2.0; underlying Poly Haven Jorge Camacho CC0-1.0; mixed provenance in NOTICE"
+    },
+    {
+      "path": "industrial_handwheel/textures/modular_industrial_pipes_01_group02_diff_2k.png",
+      "sha256": "a3a1da123ba067bbc3ab1923bae1ac49fde5b716a74815681f3dbc7ef32efccc",
+      "bytes": 4527371,
+      "category": "valve texture",
+      "upstream": "Poly Haven Modular Industrial Pipes 01 by Jorge Camacho",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "industrial_handwheel/textures/modular_industrial_pipes_01_group02_metal_2k.png",
+      "sha256": "0440ddc094ad5cc9eb43372c8bc1a99c6323238f2538387118c59473051a4da8",
+      "bytes": 1796022,
+      "category": "valve texture",
+      "upstream": "Poly Haven Modular Industrial Pipes 01 by Jorge Camacho",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "industrial_handwheel/textures/modular_industrial_pipes_01_group02_nor_gl_2k.png",
+      "sha256": "04e6e2dde90c8a286370058ab1627e97756d209ada16cbabec172882a9950856",
+      "bytes": 5880490,
+      "category": "valve texture",
+      "upstream": "Poly Haven Modular Industrial Pipes 01 by Jorge Camacho",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "industrial_handwheel/textures/modular_industrial_pipes_01_group02_rough_2k.png",
+      "sha256": "8f970811a81e0ea1615da25815a2683870863e2ee8d15c5ba3730f4720f71064",
+      "bytes": 2384750,
+      "category": "valve texture",
+      "upstream": "Poly Haven Modular Industrial Pipes 01 by Jorge Camacho",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "panels/ship_green/panel.usda",
+      "sha256": "3c09a018c8d35bd67928d5dc7a9dd6ae72fa0808072785c5c3307a00166005f8",
+      "bytes": 3796,
+      "category": "textured environment panel",
+      "upstream": "WasserMan panel / Poly Haven green_metal_rust",
+      "modification_status": "WasserMan USD panel with CC0 PBR maps",
+      "license": "WasserMan Apache-2.0 panel; Poly Haven CC0-1.0 source material"
+    },
+    {
+      "path": "panels/ship_green/provenance.json",
+      "sha256": "faa2b5e9acdde11897400c47e919220d3dfd690322f7377f47aba4ffc934f752",
+      "bytes": 1059,
+      "category": "textured environment panel",
+      "upstream": "WasserMan panel / Poly Haven green_metal_rust",
+      "modification_status": "WasserMan USD panel with CC0 PBR maps",
+      "license": "WasserMan Apache-2.0 panel; Poly Haven CC0-1.0 source material"
+    },
+    {
+      "path": "panels/ship_green/diffuse.jpg",
+      "sha256": "727515554ffb6410be82d3625a2837fe46612cb186ec391f77c50bd52c4d7ab2",
+      "bytes": 787402,
+      "category": "panel texture",
+      "upstream": "Poly Haven green_metal_rust",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "panels/ship_green/normal.jpg",
+      "sha256": "45ec5d256c91ccf4a87dd4c4a90f6c58b460f3862287f014bfde432055ece239",
+      "bytes": 357436,
+      "category": "panel texture",
+      "upstream": "Poly Haven green_metal_rust",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "panels/ship_green/roughness.jpg",
+      "sha256": "0a691b35df773ab86dbbc86b787f8efaa81497780820abec0832b1e7aac309a6",
+      "bytes": 690649,
+      "category": "panel texture",
+      "upstream": "Poly Haven green_metal_rust",
+      "modification_status": "Bundled source texture",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "ambench/NOTICE-upstream.md",
+      "sha256": "6095b44297e84340c716738f3ac329862be98a41601b88e94995a0dc27756148",
+      "bytes": 464,
+      "category": "license/notice",
+      "upstream": "AM-Bench / WasserMan upstream",
+      "modification_status": "Retained notice/license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "ambench/LICENSE.txt",
+      "sha256": "253deee3480ae77c17435b9d22ddaade0d7baa5d60ae42d9e24e318131ad06c9",
+      "bytes": 572,
+      "category": "license/notice",
+      "upstream": "AM-Bench / WasserMan upstream",
+      "modification_status": "Retained notice/license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "marine_mechanisms_v1/NOTICE.md",
+      "sha256": "390218beef42a3134378813754ff8ce60010ebd9c508079e1481de7926946170",
+      "bytes": 959,
+      "category": "license/notice",
+      "upstream": "AM-Bench / WasserMan upstream",
+      "modification_status": "Retained notice/license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "marine_mechanisms_v1/LICENSE.txt",
+      "sha256": "253deee3480ae77c17435b9d22ddaade0d7baa5d60ae42d9e24e318131ad06c9",
+      "bytes": 572,
+      "category": "license/notice",
+      "upstream": "AM-Bench / WasserMan upstream",
+      "modification_status": "Retained notice/license",
+      "license": "Apache-2.0"
+    }
+  ],
+  "limits": [
+    "Some USD materials reference Omniverse MDL assets not bundled.",
+    "Physical values are upstream simulation assumptions, not measured mechanism properties.",
+    "Local robot task scenes are excluded because they reference private workstation paths."
+  ]
+}

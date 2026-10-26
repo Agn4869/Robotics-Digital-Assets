@@ -17,10 +17,19 @@ This notice explains, and does not replace or expand, the standard license. Stat
 ## Code
 
 Python files under `tools/` and `examples/` are MIT-licensed; see [LICENSE-CODE](LICENSE-CODE). Keep their copyright and license notices. The MIT permission for code does not relicense model assets or remove their noncommercial/attribution requirements. Third-party packages are installed separately and retain their own licenses.
+## Third-party environment assets
+
+`assets/environments/` contains separately licensed upstream files and derivatives. They are **not** covered by the root CC BY-NC license unless a file explicitly says so:
+
+- AM-Bench mechanism USD assets: Apache-2.0, copyright The AM-Bench Contributors. Retained in `assets/environments/ambench/`.
+- WasserMan-derived marine mechanisms and industrial handwheel module: Apache-2.0 upstream terms and notices retained alongside the files. Source: https://github.com/dancher00/wasserman.
+- Poly Haven `green_metal_rust` and `modular_industrial_pipes_01` textures/source materials: CC0-1.0, with provenance retained in the environment directory.
+
+See [assets/environments/README.md](assets/environments/README.md), [SOURCES.md](assets/environments/SOURCES.md), individual `NOTICE.md`/`LICENSE.txt` files, and [manifest.json](assets/environments/manifest.json). Do not apply the root noncommercial license to an upstream Apache-2.0 or CC0 file when its own license permits broader use.
 
 ## 来源与边界
 
-本仓库由Agn4869发布和维护。用户确认其提供的UVDMS CAD导出模型可公开分发。本次发布不包含原始SolidWorks工程、博士论文原文/截图、训练数据或第三方任务场景。
+本仓库由Agn4869发布和维护。本次发布不包含原始SolidWorks工程、博士论文原文/截图或训练数据；环境目录仅包含已导出的、带来源和许可证的交互资产。
 
 模型基于ARMs UVDMS平台及本项目提供的CAD导出；平台背景与部分物理参数参考熊昕飏博士论文《水下航行器-双臂机械手动力学耦合分析及协调控制》，华中科技大学，2025。Agn4869的资产整理/转换署名不替代原平台和学术来源的贡献归属，也不声称论文图片权利。
 
