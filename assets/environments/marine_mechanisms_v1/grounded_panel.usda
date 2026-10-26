@@ -6,7 +6,7 @@
 )
 
 def Xform "Panel" (
-    prepend references = @../../panels/ship_green/panel.usda@
+    prepend references = @../panels/ship_green/panel.usda@
 )
 {
     def Cube "Foundation" (

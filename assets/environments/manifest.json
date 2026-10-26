@@ -67,8 +67,8 @@
     },
     {
       "path": "marine_mechanisms_v1/grounded_panel.usda",
-      "sha256": "9c5faf5c6c9a59e64db51846793c7ea689854256fe40cae0ee6651f963b65aeb",
-      "bytes": 3132,
+      "sha256": "d3946e1424ba7564444784da4442439e8b37b8d3f0ad99c8f348a80138ae911d",
+      "bytes": 3129,
       "category": "panel",
       "upstream": "WasserMan marine_mechanisms_v1",
       "modification_status": "WasserMan-authored panel extension referencing ship_green panel",

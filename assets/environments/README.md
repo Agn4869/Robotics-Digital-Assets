@@ -14,6 +14,9 @@ This directory contains reusable articulated environment objects for robot manip
 | `panels/ship_green/` | textured panel slab and PBR maps | USDA/JPG | Poly Haven `green_metal_rust`, CC0-1.0 |
 
 The USD files are kept in the relative layout expected by their references. Use a USD-capable viewer such as Isaac Sim, Omniverse/USD tooling, or `usdview` where available. These are environment assets, not a complete task scene and not a calibrated model of a commercial mechanism.
+![Interaction asset overview](../../docs/images/environments/interaction_assets_overview.png)
+
+The individual preview images are linked from each asset-group README: [AM-Bench](ambench/README.md), [marine mechanisms](marine_mechanisms_v1/README.md), [industrial handwheel](industrial_handwheel/README.md), and [textured panel](panels/ship_green/README.md).
 
 ## Provenance and attribution
 
@@ -32,3 +35,18 @@ This repository's **Agn4869 attribution is required for the bundle and its origi
 The authored mass, friction, damping and travel values are simulation assumptions from the upstream asset packages. They are not measurements of real buttons, valves or underwater mechanisms. Do not use them as hardware ratings, contact-force limits or safety specifications without calibration.
 
 This release intentionally excludes the local Isaac Sim task scenes because those scenes also reference the private robot workspace and are not portable on their own. The object files can be composed into new scenes using the relative references documented above.
+
+## 中文说明
+
+这里整理了可复用的机器人环境交互对象：按钮、拨杆、滑块导轨、工业手轮、接地面板和纹理面板。
+
+| 目录 | 内容 | 格式 |
+|---|---|---|
+| `ambench/` | AM-Bench按钮、拨杆、滑块、阀门 | USD |
+| `marine_mechanisms_v1/` | 海洋风格拨杆、滑块和接地面板衍生版本 | USDA |
+| `industrial_handwheel/` | 工业手轮、纹理和来源信息 | USDC / USDA |
+| `panels/ship_green/` | 纹理面板和PBR贴图 | USDA / JPG |
+
+每个资产组的 `README.md` 都包含中英文说明和对应预览图。预览图是基于 USD 几何数据生成的轻量展示，省略材质、纹理和动力学，不等同于 Isaac Sim 的最终渲染。
+
+**不会包含任何 SolidWorks 文件**，也不会上传 `.SLDASM`、`.SLDPRT` 或私有任务场景。再分发前请阅读各目录的 `NOTICE.md`、`LICENSE.txt`、[SOURCES.md](SOURCES.md) 和 [manifest.json](manifest.json)。上游 Apache-2.0 与 CC0-1.0 文件不自动适用仓库根目录的 CC BY-NC 许可。
