@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="uvdms_floating_zero_gravity">
+  <!-- Generated from the portable URDF. Gains/collisions are demo assumptions; no hydrodynamics. -->
+  <compiler angle="radian" meshdir="../meshes" autolimits="true" inertiafromgeom="false" fusestatic="false" balanceinertia="false" boundmass="0" boundinertia="0" />
+  <option timestep="0.0005" integrator="implicitfast" solver="Newton" iterations="100" tolerance="1e-10" gravity="0 0 0" />
+  <statistic center="-0.15 0 1.15" extent="1.8" />
+  <visual>
+    <global offwidth="1600" offheight="1200" />
+    <headlight ambient="0.3 0.3 0.3" diffuse="0.6 0.6 0.6" specular="0.15 0.15 0.15" />
+  </visual>
+  <default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="2" density="0" />
+    </default>
+    <default class="collision">
+      <geom contype="1" conaffinity="1" group="3" density="0" rgba="0.8 0.25 0.1 0" friction="0.7 0.01 0.001" condim="3" solref="0.005 1" solimp="0.9 0.95 0.001" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="mesh_00_base_link" file="base_link.stl" scale="1 1 1" />
+    <mesh name="mesh_01_link_1A" file="link_1A.stl" scale="1 1 1" />
+    <mesh name="mesh_02_link_2A" file="link_2A.stl" scale="1 1 1" />
+    <mesh name="mesh_03_link_3A" file="link_3A.stl" scale="1 1 1" />
+    <mesh name="mesh_04_link_4A" file="link_4A.stl" scale="1 1 1" />
+    <mesh name="mesh_05_gripper_base_link" file="gripper_base_link.stl" scale="1 1 1" />
+    <mesh name="mesh_06_gripper_left_inner_link" file="gripper_left_inner_link.stl" scale="1 1 1" />
+    <mesh name="mesh_07_gripper_left_jaw_link" file="gripper_left_jaw_link.stl" scale="1 1 1" />
+    <mesh name="mesh_08_gripper_left_outer_link" file="gripper_left_outer_link.stl" scale="1 1 1" />
+    <mesh name="mesh_09_gripper_right_inner_link" file="gripper_right_inner_link.stl" scale="1 1 1" />
+    <mesh name="mesh_10_gripper_right_jaw_link" file="gripper_right_jaw_link.stl" scale="1 1 1" />
+    <mesh name="mesh_11_gripper_right_outer_link" file="gripper_right_outer_link.stl" scale="1 1 1" />
+    <mesh name="mesh_12_link_1B" file="link_1B.stl" scale="1 1 1" />
+    <mesh name="mesh_13_link_2B" file="link_2B.stl" scale="1 1 1" />
+    <mesh name="mesh_14_link_3B" file="link_3B.stl" scale="1 1 1" />
+    <mesh name="mesh_15_link_4B" file="link_4B.stl" scale="1 1 1" />
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 1.2">
+      <freejoint name="floating_base" />
+      <inertial mass="29.878" pos="-0.21133 0.0021801 0.33464" fullinertia="2.56 3.25 2.94 -0.01 -0.08 0.03" />
+      <geom name="base_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_00_base_link" rgba="0.69804 0.69804 0.69804 1" />
+      <geom name="base_link_collision_upper_hull" class="collision" type="box" pos="-0.2585 0 0.355" size="0.5885 0.3225 0.225" />
+      <body name="link_1A" pos="0.0492999 0.125249 -0.10325" quat="0.4999981633974483 -0.4999999999966269 0.5000018366025516 -0.4999999999966269">
+        <inertial mass="0.33183" pos="4.50247e-05 0.0735971 -0.03365" fullinertia="0.00018008 0.00012344 0.00015274 -1.8956e-06 2.3669e-11 -3.6598e-07" />
+        <joint name="joint_1A" type="hinge" axis="0 0 1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+        <geom name="link_1A_visual_0" class="visual" pos="-0.00464118 -0.0286529 -0" quat="1 0 0 0" type="mesh" mesh="mesh_01_link_1A" rgba="0.69804 0.69804 0.69804 1" />
+        <geom name="link_1A_collision_0" class="collision" pos="-0.00464118 -0.0286529 -0" quat="1 0 0 0" type="mesh" mesh="mesh_01_link_1A" />
+        <body name="link_2A" pos="0.0351998 0.0997471 -0.0336" quat="0.7071054825112363 0 0.7071080798594735 0">
+          <inertial mass="0.50657" pos="8.0321E-05 0.18362 -0.035882" fullinertia="0.0024479 0.0005045 0.0024658 3.8567e-08 2.4435e-07 -2.1761e-06" />
+          <joint name="joint_2A" type="hinge" axis="0 0 -1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+          <geom name="link_2A_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_02_link_2A" rgba="1 1 1 1" />
+          <geom name="link_2A_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_02_link_2A" />
+          <body name="link_3A" pos="0.00015 0.27269 -0.00028678" quat="-3.673205103346574e-06 0.9999999999932537 0 -0">
+            <inertial mass="0.47744" pos="-0.17647 -0.0069515 0.033993" fullinertia="0.00049496 0.0021442 0.0021234 -1.5376e-06 -1.5357e-06 9.7392e-08" />
+            <joint name="joint_3A" type="hinge" axis="0 0 1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+            <geom name="link_3A_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_03_link_3A" rgba="1 1 1 1" />
+            <geom name="link_3A_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_03_link_3A" />
+            <body name="link_4A" pos="-0.27384 -0.03022 0.035176" quat="-2.597343466964615e-06 -0.707105482506466 -2.597353007557415e-06 0.7071080798547033">
+              <inertial mass="0.00053721" pos="2.7756E-17 -1.1102E-16 -0.0005" fullinertia="2.9726e-08 2.9726e-08 5.9362e-08 -3.809e-24 -5.2782e-24 -2.0025e-23" />
+              <joint name="joint_4A" type="hinge" axis="0 0 1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+              <geom name="link_4A_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_04_link_4A" rgba="1 1 1 1" />
+              <geom name="link_4A_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_04_link_4A" />
+              <body name="A_gripper_base_link" pos="0 0 0" quat="0.4999981633974483 0.4999999999966269 -0.4999999999966269 0.5000018366025516">
+                <inertial mass="0.29117" pos="0.033447 0.0036501 -0.028339" fullinertia="0.00012457 6.407299999999999e-05 0.00011936 -2.0481e-06 -1.0336e-06 2.513e-06" />
+                <geom name="A_gripper_base_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_05_gripper_base_link" rgba="0.69804 0.69804 0.69804 1" />
+                <geom name="A_gripper_base_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_05_gripper_base_link" />
+                <body name="A_gripper_left_inner_link" pos="0.0355 0.0125 0.0076" quat="1 0 0 0">
+                  <inertial mass="0.0066568" pos="0.00757153 0.00563705 -0.00139801" fullinertia="5.77028e-07 8.95493e-07 1.45951e-06 -5.3797e-07 -1.39145e-08 -1.03867e-08" />
+                  <joint name="A_gripper_left_D" type="hinge" axis="0 0 -1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="A_gripper_left_inner_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_06_gripper_left_inner_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="A_gripper_left_inner_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_06_gripper_left_inner_link" />
+                  <body name="A_gripper_left_jaw_link" pos="0.028055 0.020926 0" quat="1 0 0 0">
+                    <inertial mass="0.033048" pos="0.0217676 0.00601999 -0.00642772" fullinertia="2.68863e-06 1.09376e-05 1.13551e-05 1.98012e-06 -8.08642e-10 2.52664e-08" />
+                    <joint name="A_gripper_left_B" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                    <geom name="A_gripper_left_jaw_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_07_gripper_left_jaw_link" rgba="0.69804 0.69804 0.69804 1" />
+                    <geom name="A_gripper_left_jaw_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_07_gripper_left_jaw_link" />
+                  </body>
+                </body>
+                <body name="A_gripper_left_outer_link" pos="0.028147 0.032703 0.0016" quat="1 0 0 0">
+                  <inertial mass="0.0052826" pos="0.0108929 0.00913989 -0.00125956" fullinertia="5.34868e-07 7.64103e-07 9.27182e-07 -4.35202e-07 -1.49356e-08 -1.25281e-08" />
+                  <joint name="A_gripper_left_A" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="A_gripper_left_outer_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_08_gripper_left_outer_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="A_gripper_left_outer_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_08_gripper_left_outer_link" />
+                </body>
+                <body name="A_gripper_right_inner_link" pos="0.0355 -0.0125 0.0076" quat="1 0 0 0">
+                  <inertial mass="0.0067264" pos="0.00754536 -0.00586527 -0.00140078" fullinertia="6.10208e-07 8.91009e-07 1.48815e-06 5.58973e-07 -1.34012e-08 1.04457e-08" />
+                  <joint name="A_gripper_right_D" type="hinge" axis="0 0 -1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="A_gripper_right_inner_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_09_gripper_right_inner_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="A_gripper_right_inner_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_09_gripper_right_inner_link" />
+                  <body name="A_gripper_right_jaw_link" pos="0.027613 -0.021506 0.004" quat="1 0 0 0">
+                    <inertial mass="0.032932" pos="0.0220529 -0.00515164 -0.010536" fullinertia="2.79752e-06 1.07028e-05 1.12678e-05 -2.239e-06 6.36578e-08 3.46405e-09" />
+                    <joint name="A_gripper_right_B" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                    <geom name="A_gripper_right_jaw_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_10_gripper_right_jaw_link" rgba="0.69804 0.69804 0.69804 1" />
+                    <geom name="A_gripper_right_jaw_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_10_gripper_right_jaw_link" />
+                  </body>
+                </body>
+                <body name="A_gripper_right_outer_link" pos="0.028147 -0.032703 0.0016" quat="1 0 0 0">
+                  <inertial mass="0.0052826" pos="0.0106949 -0.00935773 -0.00125861" fullinertia="5.52876e-07 7.45501e-07 9.26571e-07 4.393e-07 -1.4576e-08 1.28256e-08" />
+                  <joint name="A_gripper_right_A" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="A_gripper_right_outer_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_11_gripper_right_outer_link" rgba="1 1 1 1" />
+                  <geom name="A_gripper_right_outer_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_11_gripper_right_outer_link" />
+                </body>
+                <body name="A_gripper_tcp" pos="0.115 0 0" quat="1 0 0 0">
+                  <site name="A_gripper_tcp" type="sphere" size="0.006" group="4" rgba="0.1 0.8 0.9 1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="link_1B" pos="0.0492999 -0.125255 -0.103251" quat="0.4999981633974483 -0.4999999999966269 0.5000018366025516 -0.4999999999966269">
+        <inertial mass="0.33183" pos="-4.52e-05 0.0736013 -0.033845" fullinertia="0.00018008 0.00012344 0.00015274 1.8955e-06 2.3669e-11 -3.6598e-07" />
+        <joint name="joint_1B" type="hinge" axis="0 0 -1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+        <geom name="link_1B_visual_0" class="visual" pos="-0.004605 -0.0274487 -0" quat="1 0 0 0" type="mesh" mesh="mesh_12_link_1B" rgba="0.69804 0.69804 0.69804 1" />
+        <geom name="link_1B_collision_0" class="collision" pos="-0.004605 -0.0274487 -0" quat="1 0 0 0" type="mesh" mesh="mesh_12_link_1B" />
+        <body name="link_2B" pos="-0.0352 0.0997513 -0.0339" quat="0.7071054825112363 0 0.7071080798594735 0">
+          <inertial mass="0.50657" pos="4.7642E-05 0.18362 0.035882" fullinertia="0.0024479 0.0005045 0.0024658 -3.8543e-08 2.4433e-07 2.176e-06" />
+          <joint name="joint_2B" type="hinge" axis="0 0 1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+          <geom name="link_2B_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_13_link_2B" rgba="1 1 1 1" />
+          <geom name="link_2B_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_13_link_2B" />
+          <body name="link_3B" pos="0.00015 0.27269 0.00028678" quat="1 0 0 0">
+            <inertial mass="0.47744" pos="-0.17647 0.0069776 0.034083" fullinertia="0.00049496 0.0021442 0.0021234 2.2535e-06 -1.5359e-06 9.7334e-08" />
+            <joint name="joint_3B" type="hinge" axis="0 0 -1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+            <geom name="link_3B_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_14_link_3B" rgba="1 1 1 1" />
+            <geom name="link_3B_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_14_link_3B" />
+            <body name="link_4B" pos="-0.27384 0.03022 0.035376" quat="0.7071054825112363 0 -0.7071080798594735 0">
+              <inertial mass="0.00053721" pos="1.3878E-17 0 -0.0005" fullinertia="2.9726e-08 2.9726e-08 5.9362e-08 2.3117e-24 1.1944e-25 7.3867e-24" />
+              <joint name="joint_4B" type="hinge" axis="0 0 1" limited="true" range="-1.5708 1.5708" damping="0.3" armature="0.01" />
+              <geom name="link_4B_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_15_link_4B" rgba="1 1 1 1" />
+              <geom name="link_4B_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_15_link_4B" />
+              <body name="B_gripper_base_link" pos="0 0 0" quat="0.4999981633974483 0.4999999999966269 -0.4999999999966269 0.5000018366025516">
+                <inertial mass="0.29117" pos="0.033447 0.0036501 -0.028339" fullinertia="0.00012457 6.407299999999999e-05 0.00011936 -2.0481e-06 -1.0336e-06 2.513e-06" />
+                <geom name="B_gripper_base_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_05_gripper_base_link" rgba="0.69804 0.69804 0.69804 1" />
+                <geom name="B_gripper_base_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_05_gripper_base_link" />
+                <body name="B_gripper_left_inner_link" pos="0.0355 0.0125 0.0076" quat="1 0 0 0">
+                  <inertial mass="0.0066568" pos="0.00757153 0.00563705 -0.00139801" fullinertia="5.77028e-07 8.95493e-07 1.45951e-06 -5.3797e-07 -1.39145e-08 -1.03867e-08" />
+                  <joint name="B_gripper_left_D" type="hinge" axis="0 0 -1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="B_gripper_left_inner_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_06_gripper_left_inner_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="B_gripper_left_inner_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_06_gripper_left_inner_link" />
+                  <body name="B_gripper_left_jaw_link" pos="0.028055 0.020926 0" quat="1 0 0 0">
+                    <inertial mass="0.033048" pos="0.0217676 0.00601999 -0.00642772" fullinertia="2.68863e-06 1.09376e-05 1.13551e-05 1.98012e-06 -8.08642e-10 2.52664e-08" />
+                    <joint name="B_gripper_left_B" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                    <geom name="B_gripper_left_jaw_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_07_gripper_left_jaw_link" rgba="0.69804 0.69804 0.69804 1" />
+                    <geom name="B_gripper_left_jaw_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_07_gripper_left_jaw_link" />
+                  </body>
+                </body>
+                <body name="B_gripper_left_outer_link" pos="0.028147 0.032703 0.0016" quat="1 0 0 0">
+                  <inertial mass="0.0052826" pos="0.0108929 0.00913989 -0.00125956" fullinertia="5.34868e-07 7.64103e-07 9.27182e-07 -4.35202e-07 -1.49356e-08 -1.25281e-08" />
+                  <joint name="B_gripper_left_A" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="B_gripper_left_outer_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_08_gripper_left_outer_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="B_gripper_left_outer_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_08_gripper_left_outer_link" />
+                </body>
+                <body name="B_gripper_right_inner_link" pos="0.0355 -0.0125 0.0076" quat="1 0 0 0">
+                  <inertial mass="0.0067264" pos="0.00754536 -0.00586527 -0.00140078" fullinertia="6.10208e-07 8.91009e-07 1.48815e-06 5.58973e-07 -1.34012e-08 1.04457e-08" />
+                  <joint name="B_gripper_right_D" type="hinge" axis="0 0 -1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="B_gripper_right_inner_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_09_gripper_right_inner_link" rgba="0.69804 0.69804 0.69804 1" />
+                  <geom name="B_gripper_right_inner_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_09_gripper_right_inner_link" />
+                  <body name="B_gripper_right_jaw_link" pos="0.027613 -0.021506 0.004" quat="1 0 0 0">
+                    <inertial mass="0.032932" pos="0.0220529 -0.00515164 -0.010536" fullinertia="2.79752e-06 1.07028e-05 1.12678e-05 -2.239e-06 6.36578e-08 3.46405e-09" />
+                    <joint name="B_gripper_right_B" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                    <geom name="B_gripper_right_jaw_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_10_gripper_right_jaw_link" rgba="0.69804 0.69804 0.69804 1" />
+                    <geom name="B_gripper_right_jaw_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_10_gripper_right_jaw_link" />
+                  </body>
+                </body>
+                <body name="B_gripper_right_outer_link" pos="0.028147 -0.032703 0.0016" quat="1 0 0 0">
+                  <inertial mass="0.0052826" pos="0.0106949 -0.00935773 -0.00125861" fullinertia="5.52876e-07 7.45501e-07 9.26571e-07 4.393e-07 -1.4576e-08 1.28256e-08" />
+                  <joint name="B_gripper_right_A" type="hinge" axis="0 0 1" limited="true" range="-0.7 0.7" damping="0.02" armature="0.0002" />
+                  <geom name="B_gripper_right_outer_link_visual_0" class="visual" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_11_gripper_right_outer_link" rgba="1 1 1 1" />
+                  <geom name="B_gripper_right_outer_link_collision_0" class="collision" pos="0 0 0" quat="1 0 0 0" type="mesh" mesh="mesh_11_gripper_right_outer_link" />
+                </body>
+                <body name="B_gripper_tcp" pos="0.115 0 0" quat="1 0 0 0">
+                  <site name="B_gripper_tcp" type="sphere" size="0.006" group="4" rgba="0.1 0.8 0.9 1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <geom name="floor" type="plane" size="5 5 0.1" group="0" rgba="0.12 0.17 0.21 1" friction="0.8 0.02 0.002" condim="3" />
+    <light name="key" pos="1 -2 4" dir="-0.3 0.5 -1" diffuse="0.8 0.8 0.8" castshadow="true" />
+    <light name="fill" pos="-2 2 3" dir="0.5 -0.4 -1" diffuse="0.45 0.5 0.6" castshadow="false" />
+    <camera name="overview" pos="2 -2.6 2" xyaxes="0.7706452723106011 0.6372643597953047 -0 -0.155688365514854 0.1882743024830792 0.9696978497799318" fovy="42" />
+    <camera name="front" pos="2.5 0 1.35" xyaxes="0 1 0 -0.07525766947068785 0 0.9971641204866131" fovy="42" />
+    <camera name="rear" pos="-2.5 1.8 1.9" xyaxes="-0.6080768777884904 -0.7938781460016402 0 0.1949802800967713 -0.1493465975209312 0.969370045020118" fovy="42" />
+  </worldbody>
+  <contact>
+    <exclude body1="base_link" body2="link_1A" />
+    <exclude body1="base_link" body2="link_1B" />
+    <exclude body1="link_1A" body2="link_2A" />
+    <exclude body1="link_2A" body2="link_3A" />
+    <exclude body1="link_3A" body2="link_4A" />
+    <exclude body1="link_3A" body2="A_gripper_base_link" />
+    <exclude body1="link_3A" body2="A_gripper_tcp" />
+    <exclude body1="link_4A" body2="A_gripper_base_link" />
+    <exclude body1="link_4A" body2="A_gripper_left_inner_link" />
+    <exclude body1="link_4A" body2="A_gripper_left_outer_link" />
+    <exclude body1="link_4A" body2="A_gripper_right_inner_link" />
+    <exclude body1="link_4A" body2="A_gripper_right_outer_link" />
+    <exclude body1="link_4A" body2="A_gripper_tcp" />
+    <exclude body1="link_1B" body2="link_2B" />
+    <exclude body1="link_2B" body2="link_3B" />
+    <exclude body1="link_3B" body2="link_4B" />
+    <exclude body1="link_3B" body2="B_gripper_base_link" />
+    <exclude body1="link_3B" body2="B_gripper_tcp" />
+    <exclude body1="link_4B" body2="B_gripper_base_link" />
+    <exclude body1="link_4B" body2="B_gripper_left_inner_link" />
+    <exclude body1="link_4B" body2="B_gripper_left_outer_link" />
+    <exclude body1="link_4B" body2="B_gripper_right_inner_link" />
+    <exclude body1="link_4B" body2="B_gripper_right_outer_link" />
+    <exclude body1="link_4B" body2="B_gripper_tcp" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_left_inner_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_left_jaw_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_left_outer_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_right_inner_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_right_jaw_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_base_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_left_jaw_link" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_left_outer_link" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_right_inner_link" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_right_jaw_link" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_left_inner_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_left_jaw_link" body2="A_gripper_left_outer_link" />
+    <exclude body1="A_gripper_left_jaw_link" body2="A_gripper_right_inner_link" />
+    <exclude body1="A_gripper_left_jaw_link" body2="A_gripper_right_jaw_link" />
+    <exclude body1="A_gripper_left_jaw_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_left_jaw_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_left_outer_link" body2="A_gripper_right_inner_link" />
+    <exclude body1="A_gripper_left_outer_link" body2="A_gripper_right_jaw_link" />
+    <exclude body1="A_gripper_left_outer_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_left_outer_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_right_inner_link" body2="A_gripper_right_jaw_link" />
+    <exclude body1="A_gripper_right_inner_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_right_inner_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_right_jaw_link" body2="A_gripper_right_outer_link" />
+    <exclude body1="A_gripper_right_jaw_link" body2="A_gripper_tcp" />
+    <exclude body1="A_gripper_right_outer_link" body2="A_gripper_tcp" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_left_inner_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_left_jaw_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_left_outer_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_right_inner_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_right_jaw_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_base_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_left_jaw_link" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_left_outer_link" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_right_inner_link" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_right_jaw_link" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_left_inner_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_left_jaw_link" body2="B_gripper_left_outer_link" />
+    <exclude body1="B_gripper_left_jaw_link" body2="B_gripper_right_inner_link" />
+    <exclude body1="B_gripper_left_jaw_link" body2="B_gripper_right_jaw_link" />
+    <exclude body1="B_gripper_left_jaw_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_left_jaw_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_left_outer_link" body2="B_gripper_right_inner_link" />
+    <exclude body1="B_gripper_left_outer_link" body2="B_gripper_right_jaw_link" />
+    <exclude body1="B_gripper_left_outer_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_left_outer_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_right_inner_link" body2="B_gripper_right_jaw_link" />
+    <exclude body1="B_gripper_right_inner_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_right_inner_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_right_jaw_link" body2="B_gripper_right_outer_link" />
+    <exclude body1="B_gripper_right_jaw_link" body2="B_gripper_tcp" />
+    <exclude body1="B_gripper_right_outer_link" body2="B_gripper_tcp" />
+  </contact>
+  <equality>
+    <joint name="A_gripper_left_D_mimic" joint1="A_gripper_left_D" joint2="A_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="A_gripper_left_B_mimic" joint1="A_gripper_left_B" joint2="A_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="A_gripper_left_A_mimic" joint1="A_gripper_left_A" joint2="A_gripper_right_D" polycoef="0 1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="A_gripper_right_B_mimic" joint1="A_gripper_right_B" joint2="A_gripper_right_D" polycoef="0 1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="A_gripper_right_A_mimic" joint1="A_gripper_right_A" joint2="A_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="B_gripper_left_D_mimic" joint1="B_gripper_left_D" joint2="B_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="B_gripper_left_B_mimic" joint1="B_gripper_left_B" joint2="B_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="B_gripper_left_A_mimic" joint1="B_gripper_left_A" joint2="B_gripper_right_D" polycoef="0 1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="B_gripper_right_B_mimic" joint1="B_gripper_right_B" joint2="B_gripper_right_D" polycoef="0 1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+    <joint name="B_gripper_right_A_mimic" joint1="B_gripper_right_A" joint2="B_gripper_right_D" polycoef="0 -1 0 0 0" solref="0.003 1" solimp="0.95 0.99 0.001" />
+  </equality>
+  <actuator>
+    <position name="joint_1A" joint="joint_1A" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_2A" joint="joint_2A" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_3A" joint="joint_3A" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_4A" joint="joint_4A" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_1B" joint="joint_1B" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_2B" joint="joint_2B" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_3B" joint="joint_3B" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="joint_4B" joint="joint_4B" kp="80" kv="8" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-10 10" />
+    <position name="A_gripper_right_D" joint="A_gripper_right_D" kp="4" kv="0.08" ctrllimited="true" ctrlrange="-0.7 0.7" forcelimited="true" forcerange="-10 10" />
+    <position name="B_gripper_right_D" joint="B_gripper_right_D" kp="4" kv="0.08" ctrllimited="true" ctrlrange="-0.7 0.7" forcelimited="true" forcerange="-10 10" />
+  </actuator>
+  <!-- Free rigid body in zero gravity: no buoyancy, drag, added mass, thrust or fluid forces. -->
+</mujoco>

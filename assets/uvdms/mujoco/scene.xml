@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="uvdms_fixed_scene">
+  <include file="model.xml" />
+  <worldbody>
+    <geom name="floor" type="plane" size="5 5 0.1" group="0" rgba="0.12 0.17 0.21 1" friction="0.8 0.02 0.002" condim="3" />
+    <light name="key" pos="1 -2 4" dir="-0.3 0.5 -1" diffuse="0.8 0.8 0.8" castshadow="true" />
+    <light name="fill" pos="-2 2 3" dir="0.5 -0.4 -1" diffuse="0.45 0.5 0.6" castshadow="false" />
+    <camera name="overview" pos="2 -2.6 2" xyaxes="0.7706452723106011 0.6372643597953047 -0 -0.155688365514854 0.1882743024830792 0.9696978497799318" fovy="42" />
+    <camera name="front" pos="2.5 0 1.35" xyaxes="0 1 0 -0.07525766947068785 0 0.9971641204866131" fovy="42" />
+    <camera name="rear" pos="-2.5 1.8 1.9" xyaxes="-0.6080768777884904 -0.7938781460016402 0 0.1949802800967713 -0.1493465975209312 0.969370045020118" fovy="42" />
+  </worldbody>
+</mujoco>

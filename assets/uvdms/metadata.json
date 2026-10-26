@@ -1,0 +1,779 @@
+{
+  "schema_version": 1,
+  "name": "uvdms",
+  "title": "UVDMS dual-arm underwater vehicle/manipulator model",
+  "license": "CC-BY-NC-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "attribution": "Agn4869",
+  "source_project_url": "https://github.com/Agn4869/Robotics-Digital-Assets",
+  "source": {
+    "format": "URDF and SolidWorks-derived STL",
+    "urdf_sha256": "bb4053ef347732904f24478faa12f54dbbdd69cf7e7d9ed18ecbe138e2f1bcaa"
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "inertia": "kg*m^2"
+  },
+  "mass_kg": 33.27295122,
+  "counts": {
+    "links": 25,
+    "joints": 24,
+    "fixed_joints": 4,
+    "movable_joints": 20,
+    "mimic_joints": 10,
+    "independent_movable_joints": 10,
+    "links_without_inertial": 2,
+    "unique_meshes": 16,
+    "source_triangles": 1713576,
+    "generated_triangles": 168445
+  },
+  "simplification": {
+    "method": "fast-simplification quadric-error mesh decimation",
+    "hull_triangle_target": 40000,
+    "other_mesh_triangle_cap": 6000,
+    "disclaimer": "Meshes are reduced visual/collision approximations of the source CAD, not manufacturing geometry. Small meshes are preserved geometrically. Units, origins and URDF inertias are unchanged; inertias are not recomputed from reduced meshes. Watertightness is an edge-incidence diagnostic, not proof of topology, absence of self-intersections, or physical fidelity. Existing non-watertight input geometry is not repaired. Grippers retain affine mimic approximations, not closed four-bar constraints. No hydrodynamics or hardware-fidelity validation is claimed."
+  },
+  "meshes": {
+    "base_link.stl": {
+      "source": {
+        "name": "base_link.STL",
+        "sha256": "a9ac38b4c33923bd6c23367fd1aa68eae69e30b97187926348b5dfac480f2f03",
+        "bytes": 76781884,
+        "vertices": 760361,
+        "triangles": 1535636,
+        "bounds_m": [
+          [
+            -0.8470848798751831,
+            -0.3224862515926361,
+            -0.11699999868869781
+          ],
+          [
+            0.33000001311302185,
+            0.3224862515926361,
+            0.5838000178337097
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/base_link.stl",
+        "sha256": "4e8cad11b0ed9bb765bfcc4439abcb7c079be6829e5514b680a182777cc256a9",
+        "bytes": 5521834,
+        "vertices": 54677,
+        "triangles": 110435,
+        "bounds_m": [
+          [
+            -0.8381838202476501,
+            -0.3282976746559143,
+            -0.11846029758453369
+          ],
+          [
+            0.3088838458061218,
+            0.32829758524894714,
+            0.569298267364502
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 40000,
+      "simplified": true
+    },
+    "link_1A.stl": {
+      "source": {
+        "name": "link_1A.STL",
+        "sha256": "b4f4faa8238a26bd2d1bfe717563c135d5951c1e613c3aaf507ed6352a1eeee3",
+        "bytes": 1166784,
+        "vertices": 13030,
+        "triangles": 23334,
+        "bounds_m": [
+          [
+            -0.021758858114480972,
+            0.011152723804116249,
+            -0.06750000268220901
+          ],
+          [
+            0.03714114427566528,
+            0.14435340464115143,
+            0.0
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_1A.stl",
+        "sha256": "d59b0ff84a77154a296c59aecbe2f117f8efb925010b86e489539975153785d9",
+        "bytes": 300034,
+        "vertices": 3114,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.023068539798259735,
+            0.010782734490931034,
+            -0.06759253144264221
+          ],
+          [
+            0.0372069887816906,
+            0.14470328390598297,
+            0.00038346939254552126
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_2A.stl": {
+      "source": {
+        "name": "link_2A.STL",
+        "sha256": "f73728e002764318480cb5c8d64731dbf85d2e050165e1f74d4c6fc76ccd9abf",
+        "bytes": 1295784,
+        "vertices": 14354,
+        "triangles": 25914,
+        "bounds_m": [
+          [
+            -0.04500000178813934,
+            -0.018299998715519905,
+            -0.09676893055438995
+          ],
+          [
+            0.04500000178813934,
+            0.28864067792892456,
+            0.01020000223070383
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_2A.stl",
+        "sha256": "9666321bd1421094a16540d6d700089118e2832c603ba04ae1e7e3768ca056ec",
+        "bytes": 300034,
+        "vertices": 3141,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.04512845352292061,
+            -0.01831161044538021,
+            -0.09715937077999115
+          ],
+          [
+            0.04504797235131264,
+            0.2889905571937561,
+            0.010134515352547169
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_3A.stl": {
+      "source": {
+        "name": "link_3A.STL",
+        "sha256": "e965acb91db6a3b072ff38514f845f64922c82eb51a7f803f4d3a49ba4273ebe",
+        "bytes": 1384284,
+        "vertices": 15177,
+        "triangles": 27684,
+        "bounds_m": [
+          [
+            -0.2788412868976593,
+            -0.0461706779897213,
+            -0.021431803703308105
+          ],
+          [
+            0.018299998715519905,
+            0.04500000178813934,
+            0.07980000227689743
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_3A.stl",
+        "sha256": "7c92d38b2e349e3d78bfa00bb2f917e61161d74011681bf5d3fea2c601b83e8e",
+        "bytes": 300034,
+        "vertices": 3009,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.2788824141025543,
+            -0.04652056097984314,
+            -0.020955482497811317
+          ],
+          [
+            0.01850363425910473,
+            0.04614019766449928,
+            0.07992871105670929
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_4A.stl": {
+      "source": {
+        "name": "link_4A.STL",
+        "sha256": "8aadbceb0b1d28d387105815fb09461dc3c83f0f43471390d98e6267b48953df",
+        "bytes": 12684,
+        "vertices": 126,
+        "triangles": 252,
+        "bounds_m": [
+          [
+            -0.013992047868669033,
+            -0.013961701653897762,
+            -0.0010000000474974513
+          ],
+          [
+            0.013984641060233116,
+            0.013999697752296925,
+            4.7497450417210985e-11
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_4A.stl",
+        "sha256": "0ea964a3b67d36cb839dc86e64fa3dc0d5f5d441fec1e00ef0fd8c2c622af754",
+        "bytes": 12684,
+        "vertices": 126,
+        "triangles": 252,
+        "bounds_m": [
+          [
+            -0.013992047868669033,
+            -0.013961701653897762,
+            -0.0010000000474974513
+          ],
+          [
+            0.013984641060233116,
+            0.013999697752296925,
+            4.7497450417210985e-11
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "link_1B.stl": {
+      "source": {
+        "name": "link_1B.STL",
+        "sha256": "59f50695493097300e6189c06d1cfe834e746c0b56c7ffae748855f87a02d8a5",
+        "bytes": 1166784,
+        "vertices": 13033,
+        "triangles": 23334,
+        "bounds_m": [
+          [
+            -0.027895137667655945,
+            0.009948480874300003,
+            -0.06750000268220901
+          ],
+          [
+            0.03100486285984516,
+            0.14314915239810944,
+            5.551115123125783e-17
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_1B.stl",
+        "sha256": "80d8814e5c70f3af68ba0a5267c9f92f6f425451abbf9ca755fc40f14fb851da",
+        "bytes": 300034,
+        "vertices": 3119,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.02796098031103611,
+            0.009578491561114788,
+            -0.06759253144264221
+          ],
+          [
+            0.032314542680978775,
+            0.14349903166294098,
+            0.0003834695089608431
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_2B.stl": {
+      "source": {
+        "name": "link_2B.STL",
+        "sha256": "516bc2726d092e49e51b375ba0b0bc23cb36f5ae0bab03a880eff03e9d97ece9",
+        "bytes": 1295784,
+        "vertices": 14354,
+        "triangles": 25914,
+        "bounds_m": [
+          [
+            -0.04500000178813934,
+            -0.018299998715519905,
+            -0.01020000223070383
+          ],
+          [
+            0.04500000178813934,
+            0.28864067792892456,
+            0.09676893055438995
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_2B.stl",
+        "sha256": "286948322b2125757fb111cb2666b7041a10c723bc275db9b6ce579aeb3769a4",
+        "bytes": 300034,
+        "vertices": 3141,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.04504797235131264,
+            -0.01831161044538021,
+            -0.010134515352547169
+          ],
+          [
+            0.04512845352292061,
+            0.2889905571937561,
+            0.09715937077999115
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_3B.stl": {
+      "source": {
+        "name": "link_3B.STL",
+        "sha256": "3e3adac1e89063744071c63c381e80129d27582d0e67dfd7ff63830ffd3cd082",
+        "bytes": 1384284,
+        "vertices": 15177,
+        "triangles": 27684,
+        "bounds_m": [
+          [
+            -0.2788412868976593,
+            -0.04500000178813934,
+            -0.021431803703308105
+          ],
+          [
+            0.018299998715519905,
+            0.0461706779897213,
+            0.07980000227689743
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_3B.stl",
+        "sha256": "847f6c5cda971a02eaede61ea821255a8358d62d11506f1401296958b662f52b",
+        "bytes": 300034,
+        "vertices": 3009,
+        "triangles": 5999,
+        "bounds_m": [
+          [
+            -0.2788824141025543,
+            -0.04550230875611305,
+            -0.020955482497811317
+          ],
+          [
+            0.01850363425910473,
+            0.04652056097984314,
+            0.07992871105670929
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "link_4B.stl": {
+      "source": {
+        "name": "link_4B.STL",
+        "sha256": "54bc6e89dc06e80497c6b56e73e851c3b220d07194866fd6eea57e7cda9b546a",
+        "bytes": 12684,
+        "vertices": 126,
+        "triangles": 252,
+        "bounds_m": [
+          [
+            -0.013999994844198227,
+            -0.013988149352371693,
+            -0.0010000000474974513
+          ],
+          [
+            0.013955580070614815,
+            0.013989131897687912,
+            4.7497450417210985e-11
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/link_4B.stl",
+        "sha256": "746476ee9773f049cbe705e84d28dbbe99e988e2329916c07807cba0e1d08418",
+        "bytes": 12684,
+        "vertices": 126,
+        "triangles": 252,
+        "bounds_m": [
+          [
+            -0.013999994844198227,
+            -0.013988149352371693,
+            -0.0010000000474974513
+          ],
+          [
+            0.013955580070614815,
+            0.013989131897687912,
+            4.7497450417210985e-11
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_base_link.stl": {
+      "source": {
+        "name": "gripper_base_link.STL",
+        "sha256": "693124347d5cd5c83a8ed72b50062d4e2496e78dee9f4e24764c480e6652b420",
+        "bytes": 403084,
+        "vertices": 4710,
+        "triangles": 8060,
+        "bounds_m": [
+          [
+            -1.3877787807814457e-17,
+            -0.03800000622868538,
+            -0.06040000170469284
+          ],
+          [
+            0.05349999666213989,
+            0.03799999877810478,
+            0.014000000432133675
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_base_link.stl",
+        "sha256": "1aee85795f052b0346b02b10eff266ac9de71ce9bbc5973906b29f61d1ac7dcb",
+        "bytes": 300084,
+        "vertices": 3496,
+        "triangles": 6000,
+        "bounds_m": [
+          [
+            -1.3877787807814457e-17,
+            -0.03800000622868538,
+            -0.060407642275094986
+          ],
+          [
+            0.05349999666213989,
+            0.03801514953374863,
+            0.014000000432133675
+          ]
+        ],
+        "is_watertight": false,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": true
+    },
+    "gripper_left_inner_link.stl": {
+      "source": {
+        "name": "gripper_left_inner_link.STL",
+        "sha256": "0de18404caa09c8eb3cc06493da3296f2714cdaf76371fa09b09e264e56ffe39",
+        "bytes": 25084,
+        "vertices": 248,
+        "triangles": 500,
+        "bounds_m": [
+          [
+            -0.011999998241662979,
+            -0.01197887770831585,
+            -0.0030000004917383194
+          ],
+          [
+            0.032060809433460236,
+            0.02493211440742016,
+            0.0020000003278255463
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_left_inner_link.stl",
+        "sha256": "3fb8c8031d7f0fb20889efbf5ccc7a05138aa7493592b33092ac9fb59954e3bd",
+        "bytes": 25084,
+        "vertices": 248,
+        "triangles": 500,
+        "bounds_m": [
+          [
+            -0.011999998241662979,
+            -0.01197887770831585,
+            -0.0030000004917383194
+          ],
+          [
+            0.032060809433460236,
+            0.02493211440742016,
+            0.0020000003278255463
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_left_jaw_link.stl": {
+      "source": {
+        "name": "gripper_left_jaw_link.STL",
+        "sha256": "7f582c4ad63f11cb45f4c691ca4fd2e869d7800748ad067d911d7f5b28bd47d0",
+        "bytes": 294584,
+        "vertices": 2959,
+        "triangles": 5890,
+        "bounds_m": [
+          [
+            -0.011353432200849056,
+            -0.003999999724328518,
+            -0.020999999716877937
+          ],
+          [
+            0.06682400405406952,
+            0.024203229695558548,
+            0.006799999624490738
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_left_jaw_link.stl",
+        "sha256": "831d66cc951dc5e0a2c7630afb895be788773a7686802b733ec9bdfa3a884946",
+        "bytes": 294584,
+        "vertices": 2959,
+        "triangles": 5890,
+        "bounds_m": [
+          [
+            -0.011353432200849056,
+            -0.003999999724328518,
+            -0.020999999716877937
+          ],
+          [
+            0.06682400405406952,
+            0.024203229695558548,
+            0.006799999624490738
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_left_outer_link.stl": {
+      "source": {
+        "name": "gripper_left_outer_link.STL",
+        "sha256": "308a6a07a704351d266775c866b78b8b8f4f350cefa39cbe2464c255bf684db2",
+        "bytes": 94784,
+        "vertices": 945,
+        "triangles": 1894,
+        "bounds_m": [
+          [
+            -0.003455093130469322,
+            -0.003481365041807294,
+            -0.012000001035630703
+          ],
+          [
+            0.03152056410908699,
+            0.02442607469856739,
+            0.008799999952316284
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_left_outer_link.stl",
+        "sha256": "1a5d8bd0de77de2b2df237c10b3beac2f54e1e9157137f2e3b950ede82066fd2",
+        "bytes": 94784,
+        "vertices": 945,
+        "triangles": 1894,
+        "bounds_m": [
+          [
+            -0.003455093130469322,
+            -0.003481365041807294,
+            -0.012000001035630703
+          ],
+          [
+            0.03152056410908699,
+            0.02442607469856739,
+            0.008799999952316284
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_right_inner_link.stl": {
+      "source": {
+        "name": "gripper_right_inner_link.STL",
+        "sha256": "4ab819e916986476bb0b7afa4d8a648b5d8d687f86089c68c038afc3fb57d2fd",
+        "bytes": 22084,
+        "vertices": 222,
+        "triangles": 440,
+        "bounds_m": [
+          [
+            -0.011998461559414864,
+            -0.025510059669613838,
+            -0.0030000004917383194
+          ],
+          [
+            0.031617358326911926,
+            0.011983910575509071,
+            0.0020000003278255463
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_right_inner_link.stl",
+        "sha256": "ed38e5e1f658e8cc579f48c34cc83d89fcb546dccf348f2958402fe21a3e2d29",
+        "bytes": 22084,
+        "vertices": 222,
+        "triangles": 440,
+        "bounds_m": [
+          [
+            -0.011998461559414864,
+            -0.025510059669613838,
+            -0.0030000004917383194
+          ],
+          [
+            0.031617358326911926,
+            0.011983910575509071,
+            0.0020000003278255463
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_right_jaw_link.stl": {
+      "source": {
+        "name": "gripper_right_jaw_link.STL",
+        "sha256": "12a253e8651f72e84b75c058db99b932eec6e5d4d1ecd2d04b7283ac54d5c9ec",
+        "bytes": 241984,
+        "vertices": 2433,
+        "triangles": 4838,
+        "bounds_m": [
+          [
+            -0.01132068783044815,
+            -0.024464217945933342,
+            -0.02500000037252903
+          ],
+          [
+            0.06665973365306854,
+            0.006418765988200903,
+            0.0027999996673315763
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_right_jaw_link.stl",
+        "sha256": "91956e6903611e5bcf900548b61f8318d86c0c0a28dfc196fabdf39b3b193d04",
+        "bytes": 241984,
+        "vertices": 2433,
+        "triangles": 4838,
+        "bounds_m": [
+          [
+            -0.01132068783044815,
+            -0.024464217945933342,
+            -0.02500000037252903
+          ],
+          [
+            0.06665973365306854,
+            0.006418765988200903,
+            0.0027999996673315763
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    },
+    "gripper_right_outer_link.stl": {
+      "source": {
+        "name": "gripper_right_outer_link.STL",
+        "sha256": "c9d341be982e59cb7f7f2188fd12a5bd18402d82a8e7373289dd1d6942620fcc",
+        "bytes": 97584,
+        "vertices": 973,
+        "triangles": 1950,
+        "bounds_m": [
+          [
+            -0.003498080652207136,
+            -0.02498605102300644,
+            -0.012000001035630703
+          ],
+          [
+            0.03107368014752865,
+            0.0034844488836824894,
+            0.008799999952316284
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "generated": {
+        "path": "meshes/gripper_right_outer_link.stl",
+        "sha256": "2cf92cd9b7bb24cd28570cca44bc88a303055697a06a5d509de5ee5a8fb45d32",
+        "bytes": 97584,
+        "vertices": 973,
+        "triangles": 1950,
+        "bounds_m": [
+          [
+            -0.003498080652207136,
+            -0.02498605102300644,
+            -0.012000001035630703
+          ],
+          [
+            0.03107368014752865,
+            0.0034844488836824894,
+            0.008799999952316284
+          ]
+        ],
+        "is_watertight": true,
+        "is_winding_consistent": true
+      },
+      "triangle_target": 6000,
+      "simplified": false
+    }
+  },
+  "generated": {
+    "urdf_path": "urdf/uvdms.urdf",
+    "urdf_sha256": "1d544022ad5d779739cc701ebdf046244d88293a0ad33d0836debc8736fe4267"
+  }
+}

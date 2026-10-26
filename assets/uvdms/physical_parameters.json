@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "reference": "熊昕飏. 水下航行器-双臂机械手动力学耦合分析及协调控制. 华中科技大学博士学位论文, 2025.",
+  "frame": "Historical thesis: x forward, y starboard, z down; origin hull COM. Released URDF: x forward, y port, z up, different origin.",
+  "hull_nominal": {
+    "evidence_class": "Published nominal parameters, not independently calibrated for this CAD",
+    "source": "Table3.1, PDF72 / printed60",
+    "mass_kg": 30.2,
+    "displacement_m3": 0.0308,
+    "cob_relative_com_m": [
+      0,
+      0,
+      -0.29
+    ],
+    "inertia_tensor_thesis_kg_m2": [
+      [
+        2.56,
+        0.01,
+        0.08
+      ],
+      [
+        0.01,
+        3.25,
+        0.03
+      ],
+      [
+        0.08,
+        0.03,
+        2.94
+      ]
+    ],
+    "inertia_tensor_urdf_axes_kg_m2": [
+      [
+        2.56,
+        -0.01,
+        -0.08
+      ],
+      [
+        -0.01,
+        3.25,
+        0.03
+      ],
+      [
+        -0.08,
+        0.03,
+        2.94
+      ]
+    ],
+    "inertia_sign_note": "Table3.1 lists products; Eq2.59 negates them before R I R^T, R=diag(1,-1,-1). About the same COM.",
+    "added_mass_derivatives": [
+      -2.5086,
+      -41.166,
+      -39.426,
+      -0.0303,
+      -1.362,
+      -1.362
+    ],
+    "quadratic_damping_derivatives": [
+      -13.6674,
+      -335.7,
+      -314.4,
+      -0.039,
+      -2.9694,
+      -3.171
+    ],
+    "hydro_order": [
+      "u",
+      "v",
+      "w",
+      "p",
+      "q",
+      "r"
+    ],
+    "hydro_sign_note": "Eq2.60/2.61 negate the derivative coefficients when forming matrices; these are not signed forces to inject directly.",
+    "units_derived": "Added translation kg, rotation kg*m^2; quadratic translation N*s^2/m^2, rotation N*m*s^2/rad^2. Units inferred from equations, not printed in table."
+  },
+  "released_cad": {
+    "mass_kg": 33.27295122,
+    "hull_mass_kg": 29.878,
+    "hull_com_m": [
+      -0.21133,
+      0.0021801,
+      0.33464
+    ],
+    "evidence_class": "CAD export and geometry estimates, with thesis hull inertia substitution",
+    "arm_joint_limits": "URDF +/-1.5708 rad, effort10Nm, velocity1rad/s are uncalibrated export limits",
+    "tcp_offset_m": 0.115,
+    "tcp_note": "Estimated from gripper base along local x; not calibrated"
+  },
+  "not_implemented": [
+    "Buoyancy",
+    "Added mass and added-mass Coriolis",
+    "Hydrodynamic drag",
+    "Thruster allocation/actuation",
+    "Wave/current forces",
+    "Waterproof servo identification"
+  ],
+  "limitations": [
+    "No measured friction or gripper slip-force calibration",
+    "Current CAD may omit components hidden during source export",
+    "Full four-bar closure not modeled; affine mimic approximation retained",
+    "Historical camera configuration not instantiated as calibrated sensor model",
+    "Thesis 45N/5Nm limits are simulation settings, not hardware ratings"
+  ]
+}

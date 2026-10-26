@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this repository when these assets support your research. Attribution when sharing licensed assets is required by CC BY-NC 4.0; see NOTICE.md."
+title: "Robotics-Digital-Assets: UVDMS Robot Assets"
+type: dataset
+authors:
+  - name: Agn4869
+    website: "https://github.com/Agn4869"
+version: "0.1.0"
+date-released: "2026-10-26"
+url: "https://github.com/Agn4869/Robotics-Digital-Assets"
+repository-code: "https://github.com/Agn4869/Robotics-Digital-Assets"
+license: CC-BY-NC-4.0
+keywords:
+  - robotics
+  - underwater robotics
+  - UVDMS
+  - URDF
+  - MuJoCo

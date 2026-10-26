@@ -1,0 +1,89 @@
+{
+  "mujoco_version": "3.3.7",
+  "python": "3.13.5",
+  "models": {
+    "model.xml": {
+      "body_count_without_world": 25,
+      "joints": 20,
+      "actuators": 10,
+      "mimic_equalities": 10,
+      "mass_kg": 33.27295122000001,
+      "inertia_max_abs_error": 2.1258085465547527e-09,
+      "nonzero_pose_fk_max_position_error_m": 3.3306690738754696e-16,
+      "stepped_seconds": 3.000000000000169,
+      "warnings": 0,
+      "peak_mimic_error_rad": 2.2260727207845665e-05,
+      "final_independent_joint_positions_rad": [
+        0.11202873933027915,
+        0.1377258247199645,
+        0.1432217510935955,
+        0.11965356713169566,
+        0.11303902182923226,
+        0.09158788150227608,
+        0.14478372883245905,
+        0.11986171718238575,
+        0.11876781696405815,
+        0.11976533947842825
+      ]
+    },
+    "scene.xml": {
+      "body_count_without_world": 25,
+      "joints": 20,
+      "actuators": 10,
+      "mimic_equalities": 10,
+      "mass_kg": 33.27295122000001,
+      "inertia_max_abs_error": 2.1258085465547527e-09,
+      "nonzero_pose_fk_max_position_error_m": 3.3306690738754696e-16,
+      "stepped_seconds": 3.000000000000169,
+      "warnings": 0,
+      "peak_mimic_error_rad": 2.2260727207845665e-05,
+      "final_independent_joint_positions_rad": [
+        0.11202873933027915,
+        0.1377258247199645,
+        0.1432217510935955,
+        0.11965356713169566,
+        0.11303902182923226,
+        0.09158788150227608,
+        0.14478372883245905,
+        0.11986171718238575,
+        0.11876781696405815,
+        0.11976533947842825
+      ]
+    },
+    "floating.xml": {
+      "body_count_without_world": 25,
+      "joints": 21,
+      "actuators": 10,
+      "mimic_equalities": 10,
+      "mass_kg": 33.27295122000001,
+      "inertia_max_abs_error": 2.1258085465547527e-09,
+      "nonzero_pose_fk_max_position_error_m": 3.3306690738754696e-16,
+      "stepped_seconds": 3.000000000000169,
+      "warnings": 0,
+      "peak_mimic_error_rad": 1.0094735580799818e-05,
+      "final_independent_joint_positions_rad": [
+        0.12000000002200253,
+        0.12000000018490663,
+        0.11999999970104837,
+        0.11999999888160022,
+        0.11999999997395286,
+        0.11999999953865315,
+        0.11999999912836523,
+        0.11999999884233892,
+        0.11999999999771949,
+        0.11999999999211505
+      ]
+    }
+  },
+  "external_finger_contact": {
+    "floor_contact_observed": true,
+    "peak_normal_force_N": 0,
+    "meaning": "Numerical contact geom pair observed; force magnitude is not used as a calibration claim"
+  },
+  "relocation_load": true,
+  "limitations": [
+    "No fluid forces or hardware validation",
+    "Approximate convex collisions and gripper mimic relations",
+    "Contact probe does not establish reliable grasping"
+  ]
+}
