@@ -5,14 +5,17 @@ Reusable digital assets for robotics research: robot models, manipulation object
 **Maintained by [Agn4869](https://github.com/Agn4869)** · [中文说明](README.zh-CN.md) · [Attribution & license](NOTICE.md) · [Citation](CITATION.cff)
 
 ![UVDMS CAD-derived robot rendered in MuJoCo](docs/images/uvdms_overview.png)
+![Complete CAD-derived URDF model in RViz2](docs/images/uvdms_rviz2.png)
+
+*RViz2 view: the complete hull STL is retained by the URDF for faithful inspection. The screenshot is a visual reference, not a MuJoCo result.*
 
 ## First asset: UVDMS
 
 A three-hull underwater vehicle with two four-joint manipulators and coupled two-finger grippers. This repository separates reusable robot assets from the experiments in [UVMS-DriftManip](https://github.com/Agn4869/UVMS-DriftManip).
 
-**Included:** a self-contained URDF, reduced STL meshes, native MuJoCo models, a runnable viewer, and reproducible gallery rendering. No ROS, Isaac Sim, SolidWorks, Git LFS, or access to the original development machine is needed for the MuJoCo demo.
+**Included:** a self-contained URDF, reduced STL meshes for the smaller components, native MuJoCo models, a runnable viewer, and reproducible gallery rendering. The full hull mesh is retained for the URDF/RViz2 view. No ROS, Isaac Sim, SolidWorks, Git LFS, or access to the original development machine is needed for the MuJoCo demo.
 
-**Scope:** a CAD-derived mechanical model, **not a calibrated underwater digital twin**. The floating model has a real free joint but zero gravity and no fluid forces; it is not a buoyancy simulation. See the [model card](assets/uvdms/README.md) before using the model for dynamics research.
+**Why the MuJoCo hull looks different:** the hull source mesh has **1,535,636 triangles**, while MuJoCo accepts at most 200,000 faces per STL mesh. MuJoCo therefore uses a clearly documented visual/collision proxy for the hull; the complete hull remains available in the URDF/RViz2 path. This is a format limit, not a claim that the source geometry is wrong.
 
 ![Dual arms and coupled grippers in a stepped MuJoCo simulation](docs/images/uvdms_motion.gif)
 

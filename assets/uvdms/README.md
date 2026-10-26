@@ -66,13 +66,13 @@ Finite gains, gravity and soft equality constraints produce nonzero tracking/mim
 
 ## Provenance, physical references and limits
 
-[metadata.json](metadata.json) records source/generated mesh hashes, triangle counts and bounds. Hull simplification requests 40,000 triangles; other meshes request up to 6,000. A simplifier may stop above the requested count, which is recorded rather than deleting components to meet a size budget. Simplification does not recompute mass/inertia or prove watertight, collision or manufacturing accuracy. Original meshes already lacking watertightness are not repaired.
+`metadata.json` records source/generated mesh hashes, triangle counts and bounds. The complete hull STL has **1,535,636 triangles** and is retained for the URDF/RViz2 path. MuJoCo cannot accept a single STL above 200,000 faces, so its native model intentionally omits that detailed hull mesh and uses the documented visual/collision box proxy. Other meshes request up to 6,000 triangles. Simplification does not recompute mass/inertia or prove watertight, collision or manufacturing accuracy.
 
 [physical_parameters.json](physical_parameters.json) separates historical nominal hydrodynamic coefficients from the current CAD description. The fluid coefficients are references only and are **not applied by these MJCF models**. Background source: 熊昕飏, *水下航行器-双臂机械手动力学耦合分析及协调控制*, HUST doctoral dissertation, 2025, especially Table3.1 and Eq.2.59–2.61.
 
 Known unresolved real-platform differences:
 
-- Current CAD may omit components that were hidden during source export; this release describes the provided model, not a verified complete bill of materials.
+The hull is intentionally preserved at source STL resolution in the URDF release. The source hull is a disconnected CAD assembly; treating it as one graph during decimation produced floating visual shards. MuJoCo therefore uses a proxy while RViz2/URDF keeps the complete authorized hull mesh. This increases download size but keeps the complete CAD view faithful. `metadata.json` records the policy and hashes.
 - Current assembly mass, buoyancy, COM/COB, joint zero directions, hard limits and continuous actuator ratings need hardware confirmation.
 - Grip friction, compliance, slip force, contact sensing and linkage backlash are not calibrated.
 - TCP offset and gripper mounting clocking are estimates; no calibrated camera model is supplied.

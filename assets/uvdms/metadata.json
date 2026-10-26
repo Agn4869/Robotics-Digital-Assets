@@ -26,13 +26,14 @@
     "links_without_inertial": 2,
     "unique_meshes": 16,
     "source_triangles": 1713576,
-    "generated_triangles": 168445
+    "generated_triangles": 1593646
   },
   "simplification": {
     "method": "fast-simplification quadric-error mesh decimation",
     "hull_triangle_target": 40000,
+    "hull_policy": "preserve_source_mesh",
     "other_mesh_triangle_cap": 6000,
-    "disclaimer": "Meshes are reduced visual/collision approximations of the source CAD, not manufacturing geometry. Small meshes are preserved geometrically. Units, origins and URDF inertias are unchanged; inertias are not recomputed from reduced meshes. Watertightness is an edge-incidence diagnostic, not proof of topology, absence of self-intersections, or physical fidelity. Existing non-watertight input geometry is not repaired. Grippers retain affine mimic approximations, not closed four-bar constraints. No hydrodynamics or hardware-fidelity validation is claimed."
+    "disclaimer": "The disconnected hull CAD assembly is preserved at source resolution because decimating it as one graph creates floating visual shards. Other meshes are reduced visual/collision approximations of the source CAD, not manufacturing geometry. Small meshes are preserved geometrically. Units, origins and URDF inertias are unchanged; inertias are not recomputed from reduced meshes. Watertightness is an edge-incidence diagnostic, not proof of topology, absence of self-intersections, or physical fidelity. Existing non-watertight input geometry is not repaired. Grippers retain affine mimic approximations, not closed four-bar constraints. No hydrodynamics or hardware-fidelity validation is claimed."
   },
   "meshes": {
     "base_link.stl": {
@@ -59,27 +60,27 @@
       },
       "generated": {
         "path": "meshes/base_link.stl",
-        "sha256": "4e8cad11b0ed9bb765bfcc4439abcb7c079be6829e5514b680a182777cc256a9",
-        "bytes": 5521834,
-        "vertices": 54677,
-        "triangles": 110435,
+        "sha256": "a9ac38b4c33923bd6c23367fd1aa68eae69e30b97187926348b5dfac480f2f03",
+        "bytes": 76781884,
+        "vertices": 760361,
+        "triangles": 1535636,
         "bounds_m": [
           [
-            -0.8381838202476501,
-            -0.3282976746559143,
-            -0.11846029758453369
+            -0.8470848798751831,
+            -0.3224862515926361,
+            -0.11699999868869781
           ],
           [
-            0.3088838458061218,
-            0.32829758524894714,
-            0.569298267364502
+            0.33000001311302185,
+            0.3224862515926361,
+            0.5838000178337097
           ]
         ],
         "is_watertight": false,
         "is_winding_consistent": true
       },
-      "triangle_target": 40000,
-      "simplified": true
+      "triangle_target": 1535636,
+      "simplified": false
     },
     "link_1A.stl": {
       "source": {

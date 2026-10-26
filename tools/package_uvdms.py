@@ -139,9 +139,12 @@ def package(source_urdf: Path, source_meshes: Path, output: Path) -> None:
         },
         "simplification": {
             "method": "fast-simplification quadric-error mesh decimation",
-            "hull_triangle_target": 40000, "other_mesh_triangle_cap": 6000,
+            "hull_triangle_target": 40000,
+            "hull_policy": "preserve_source_mesh",
+            "other_mesh_triangle_cap": 6000,
             "disclaimer": (
-                "Meshes are reduced visual/collision approximations of the source CAD, not manufacturing geometry. "
+                "The disconnected hull CAD assembly is preserved at source resolution because decimating it as one graph creates floating visual shards. "
+                "Other meshes are reduced visual/collision approximations of the source CAD, not manufacturing geometry. "
                 "Small meshes are preserved geometrically. Units, origins and URDF inertias are unchanged; "
                 "inertias are not recomputed from reduced meshes. Watertightness is an edge-incidence diagnostic, "
                 "not proof of topology, absence of self-intersections, or physical fidelity. "
@@ -160,10 +163,16 @@ def package(source_urdf: Path, source_meshes: Path, output: Path) -> None:
         (stage / "urdf").mkdir()
         for name, source in inputs.items():
             original = load_mesh(source)
-            target = 40000 if name == "base_link.stl" else 6000
+            target = len(original.faces) if name == "base_link.stl" else 6000
             reduced = simplify(original, target, name)
             destination = stage / "meshes" / name
-            destination.write_bytes(trimesh.exchange.stl.export_stl(reduced))
+            if name == "base_link.stl":
+                # The hull is a disconnected CAD assembly. Decimating it as one
+                # graph creates floating shards in visual renders; keep the
+                # authorized source mesh instead of publishing a broken hull.
+                destination.write_bytes(source.read_bytes())
+            else:
+                destination.write_bytes(trimesh.exchange.stl.export_stl(reduced))
             # Record actual binary-STL geometry (float32), not pre-export doubles.
             exported = load_mesh(destination)
             if original.is_watertight and not exported.is_watertight:

@@ -144,6 +144,16 @@ def build(urdf: Path, output: Path) -> tuple[Path, Path, Path]:
 
     def add_geometry(body: ET.Element, link: ET.Element) -> None:
         name = link.attrib["name"]
+        if name == root_link:
+            # MuJoCo rejects the 1,535,636-face hull STL (>200,000 faces per
+            # mesh). RViz2/URDF keeps the complete hull; MuJoCo uses a visual
+            # proxy and an intentionally open upper collision envelope.
+            ET.SubElement(body, "geom", {"name": "base_link_visual_proxy", "class": "visual", "type": "box",
+                                        "pos": "-0.2585 0 0.355", "size": "0.5885 0.3225 0.225",
+                                        "rgba": "0.77 0.84 0.89 1"})
+            ET.SubElement(body, "geom", {"name": "base_link_collision_upper_hull", "class": "collision", "type": "box",
+                                        "pos": "-0.2585 0 0.355", "size": "0.5885 0.3225 0.225"})
+            return
         for index, element in enumerate(link.findall("visual")):
             mesh = element.find("geometry/mesh")
             if mesh is None:
@@ -153,13 +163,6 @@ def build(urdf: Path, output: Path) -> tuple[Path, Path, Path]:
             if color is not None:
                 attributes["rgba"] = color.attrib["rgba"]
             ET.SubElement(body, "geom", attributes)
-        if name == root_link:
-            # The detailed hull's convex envelope closes the open arm workspace.
-            # Instead use ONLY an upper-hull box (z=0.13..0.58 in base axes).
-            # This deliberately omits the lower open frame, not a watertight hull.
-            ET.SubElement(body, "geom", {"name": "base_link_collision_upper_hull", "class": "collision", "type": "box",
-                                        "pos": "-0.2585 0 0.355", "size": "0.5885 0.3225 0.225"})
-            return
         for index, element in enumerate(link.findall("collision")):
             mesh = element.find("geometry/mesh")
             if mesh is None:

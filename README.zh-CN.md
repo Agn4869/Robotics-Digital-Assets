@@ -5,14 +5,19 @@
 **发布与维护：[Agn4869](https://github.com/Agn4869)** · [English](README.md) · [许可与署名](NOTICE.md) · [引用信息](CITATION.cff)
 
 ![UVDMS模型整体展示](docs/images/uvdms_overview.png)
+![RViz2完整URDF模型展示](docs/images/uvdms_rviz2.png)
+
+*RViz2展示完整艇体网格，适合查看CAD外形；这张图不是MuJoCo结果。*
 
 ## 第一套资产：UVDMS双臂水下机器人
 
 这是一套三体水下航行器与双臂机械手的CAD衍生模型。每条机械臂有4个旋转关节和1个独立夹爪驱动，夹爪其他关节通过mimic关系联动。
 
-本仓库将模型资产与 [UVMS-DriftManip](https://github.com/Agn4869/UVMS-DriftManip) 的研究代码分开发布：包含**可移植URDF、精简STL网格、原生MuJoCo模型、可运行示例、展示图和参数来源**。不需要原开发者的本地路径，也不需要安装ROS、Isaac Sim或SolidWorks。
+本仓库将模型资产与 [UVMS-DriftManip](https://github.com/Agn4869/UVMS-DriftManip) 的研究代码分开发布：包含**可移植URDF、精简STL网格、原生MuJoCo模型、可运行示例、展示图和参数来源**。小型连杆/夹爪网格做了精简；完整艇体网格保留给URDF/RViz2查看。不需要原开发者的本地路径，也不需要安装ROS、Isaac Sim或SolidWorks。
 
 **明确边界：这是可运行的机械模型，不是经过实艇标定的水下数字孪生。** 自由基座版本使用零重力，没有浮力、流体阻力、附加质量或推进器，不能把它当作水池仿真。
+
+**为什么MuJoCo中的艇体外形不同：**原始艇体STL有 **1,535,636个三角面**，MuJoCo单个STL最多接受200,000个面。为了保证MuJoCo能加载，MuJoCo版本对艇体使用了明确标注的外形/碰撞代理；完整艇体仍在URDF/RViz2版本中。这是文件格式上限，不是原始网格错误。
 
 ![MuJoCo实际动力学步进演示](docs/images/uvdms_motion.gif)
 
