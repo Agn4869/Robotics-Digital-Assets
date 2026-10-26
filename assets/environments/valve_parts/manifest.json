@@ -20,8 +20,8 @@
           "bytes": 816
         },
         "urdf/model.urdf": {
-          "sha256": "90ce988dd55d8215bbbeff35aba1d21e6bc72e95178059c347f6e5542b7cb8fa",
-          "bytes": 1082
+          "sha256": "c7309a13db7abd4d48e8b5911a660af57227a8f344aac800b3e8db6d2024f9dd",
+          "bytes": 1112
         }
       }
     },
@@ -41,8 +41,8 @@
           "bytes": 822
         },
         "urdf/model.urdf": {
-          "sha256": "5f6b6665a7ae73f34398ce6502645a8283b63b8922dc33b0d3aa63e436249828",
-          "bytes": 1097
+          "sha256": "a0e12eed39d93dbc3a54eb38dc50e06059bac11a32a53726d9f75021a3593972",
+          "bytes": 1127
         }
       }
     },
@@ -62,8 +62,8 @@
           "bytes": 850
         },
         "urdf/model.urdf": {
-          "sha256": "5153f80c358798a2f45794156effb7102c33f2418e1e0d563d741c7c4bdfe489",
-          "bytes": 1088
+          "sha256": "07c348520dd67d79a4f6f643e6e20b9cbeebaf50df02b3e8ddda56ffe72d47a3",
+          "bytes": 1118
         }
       }
     }

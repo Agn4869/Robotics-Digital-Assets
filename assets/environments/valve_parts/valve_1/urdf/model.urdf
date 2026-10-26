@@ -22,7 +22,7 @@
         rpy="1.5707963267949 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/1号阀.SLDPRT.STL" />
+          filename="package://valve_1/meshes/1号阀.SLDPRT.STL" />
       </geometry>
       <material name="valve_1_material">
         <color rgba="0.72 0.76 0.80 1" />
@@ -34,7 +34,7 @@
         rpy="1.5707963267949 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/1号阀.SLDPRT.STL" />
+          filename="package://valve_1/meshes/1号阀.SLDPRT.STL" />
       </geometry>
     </collision>
   </link>
